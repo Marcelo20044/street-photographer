@@ -1,0 +1,180 @@
+body {
+    font-family: 'Georgia', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navigation {
+    text-align: left;
+    position: absolute;
+    float: left;
+    width: 10%;
+    color: black;
+    background-color: #f1f1f1;
+    margin-top: -2.5rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-item.active {
+    color: red;
+}
+
+.menu-item:hover {
+    background-color: #ddd;
+}
+
+main {
+    align-items: center;
+    float: left;
+    width: 90%;
+    padding: 70px;
+}
+
+.group {
+    column-count: 2;
+    margin-bottom: 100px;
+}
+
+
+main img {
+    transition:transform 0.25s ease;
+    cursor: zoom-in;
+    width: 80%;
+    margin: 10px;
+    display: inline-block;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+main img:hover {
+    transform:scale(1.05);
+}
+main img:nth-child(even) {
+    box-shadow: 0px 0px 10px rgba(255, 192, 203, 1);
+}
+
+aside {
+    float: left;
+    width: 20%;
+    padding: 20px;
+    background-color: #f1f1f1;
+    overflow: auto;
+}
+
+code {
+    background-color: #f1f1f1;
+    padding: 5px;
+    display: block;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+sub {
+    font-size: 75%;
+}
+
+sup {
+    font-size: 75%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+aside {
+    min-width:300px;
+}
+
+aside p {
+    text-transform: uppercase;
+    text-decoration: line-through;
+}
+
+#contacts, #trainings {
+    margin-bottom: 3rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+.photos {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.photos article img {
+    width: 550px;
+    height: auto;
+}
+
+.photos article p {
+    text-align: right;
+    margin-right: 1rem;
+    margin-top: -4px;
+    font-style: italic;
+}
+
+.booking-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.booking-table .header {
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.booking-table .row {
+    padding: 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.booking-table .row:nth-child(odd) {
+    background-color: #e0e0e0;
+}
+
+.booking-table .row:nth-child(even) {
+    background-color: #cccccc;
+}
+
+@media (max-width: 768px) {
+    .booking-table {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-table .header,
+    .booking-table .row {
+        text-align: left;
+        padding: 10px 5px;
+    }
+}
