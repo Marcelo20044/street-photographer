@@ -122,7 +122,6 @@ button {
 .photos {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
     flex-wrap: wrap;
 }
 
@@ -138,14 +137,14 @@ button {
     font-style: italic;
 }
 
-.booking-table {
+.training-table {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
     margin-top: 20px;
 }
 
-.booking-table .header {
+.training-table .header {
     font-weight: bold;
     background-color: #333;
     color: #fff;
@@ -153,27 +152,27 @@ button {
     text-align: center;
 }
 
-.booking-table .row {
+.training-table .row {
     padding: 10px;
     background-color: #f0f0f0;
     text-align: center;
 }
 
-.booking-table .row:nth-child(odd) {
+.training-table .row:nth-child(odd) {
     background-color: #e0e0e0;
 }
 
-.booking-table .row:nth-child(even) {
+.training-table .row:nth-child(even) {
     background-color: #cccccc;
 }
 
 @media (max-width: 768px) {
-    .booking-table {
+    .training-table {
         grid-template-columns: 1fr;
     }
 
-    .booking-table .header,
-    .booking-table .row {
+    .training-table .header,
+    .training-table .row {
         text-align: left;
         padding: 10px 5px;
     }
