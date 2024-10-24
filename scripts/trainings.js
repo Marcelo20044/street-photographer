@@ -1,7 +1,6 @@
 let trainings = JSON.parse(localStorage.getItem('trainings')) || [];
 const clearButton = document.getElementById('clear-trainings');
 
-
 function generateTrainingTable() {
     const tableContainer = document.getElementById('training-table');
     tableContainer.innerHTML = '';
