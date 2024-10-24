@@ -159,23 +159,9 @@ button {
 
 .training-table {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
-    margin-top: 20px;
-}
-
-.training-table .header {
-    font-weight: bold;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
-.training-table .row {
-    padding: 10px;
-    background-color: #f0f0f0;
-    text-align: center;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    gap: 10px;
+    margin-top: 30px;
 }
 
 .training-table .row:nth-child(odd) {
@@ -186,14 +172,53 @@ button {
     background-color: #cccccc;
 }
 
-@media (max-width: 768px) {
-    .training-table {
-        grid-template-columns: 1fr;
-    }
+.header {
+    font-weight: bold;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
 
-    .training-table .header,
-    .training-table .row {
-        text-align: left;
-        padding: 10px 5px;
-    }
+.row {
+    padding: 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.header-row {
+    display: contents;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, select, button {
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#trainings {
+    max-width: 600px;
+    margin: auto;
+}
+
+.add-training {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#clear-trainings {
+    margin-top: 30px;
 }

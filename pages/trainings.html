@@ -5,6 +5,7 @@
     <title>Визитка Фотографа - Тренинги</title>
     <link rel="stylesheet" href="../styles/outlines.css">
     <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/trainings.js" defer></script>
 </head>
 <body>
 <header class="header">
@@ -19,29 +20,31 @@
 </header>
 
 <main>
+    <h2>Тренинги</h2>
     <section id="trainings">
-        <h2>Тренинги</h2>
-        <div class="training-table">
-            <div class="header">Дата</div>
-            <div class="header">Место</div>
-            <div class="header">Тема</div>
-            <div class="header">Стоимость</div>
+        <h3 class="add-training">Добавить тренинг</h3>
+        <form id="training-form">
+            <label for="date">Дата</label>
+            <input type="date" id="date" name="date" required>
+            <br>
 
-            <div class="row">01.10.2024</div>
-            <div class="row">Loft story, Санкт-Петербург</div>
-            <div class="row">Работа со светом</div>
-            <div class="row">1000₽</div>
+            <label for="location">Место</label>
+            <input type="text" id="location" name="location" required>
+            <br>
 
-            <div class="row">10.11.2024</div>
-            <div class="row">Saint.P.Studio, Санкт-Петербург</div>
-            <div class="row">Съемка в движении</div>
-            <div class="row">1500₽</div>
+            <label for="topic">Тема</label>
+            <input type="text" id="topic" name="topic" required>
+            <br>
 
-            <div class="row">15.12.2024</div>
-            <div class="row">Loft Hall, Москва</div>
-            <div class="row">Свадебная фотография</div>
-            <div class="row">2200₽</div>
-        </div>
+            <label for="price">Стоимость</label>
+            <input type="number" id="price" name="price" required>
+            <br>
+
+            <button type="submit">Добавить</button>
+        </form>
+
+        <div class="training-table" id="training-table"></div>
+        <button type="button" id="clear-trainings">Очистить тренинги</button>
     </section>
 
     <footer></footer>
