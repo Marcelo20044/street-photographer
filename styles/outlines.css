@@ -5,20 +5,51 @@ body {
 }
 
 .header {
-    position: sticky;
-    top: 0;
-    text-align: center;
     background-color: #333;
     color: white;
     padding: 20px;
+    text-align: center;
 }
 
 .header h1 {
     font-size: 30px;
-    font-weight: bold;
+    margin: 0;
 }
 
 .navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation ul {
+    margin-top: 30px;
+}
+
+.navigation ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+    background-color: #555;
+}
+
+.navigation a.active {
+    background-color: #666;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+}
+
+.sections-nav {
     text-align: left;
     position: absolute;
     float: left;
@@ -28,24 +59,16 @@ body {
     margin-top: -2.5rem;
 }
 
-.navigation a {
+.sections-nav a {
     text-decoration: none;
     color: black;
-}
-
-.menu-item.active {
-    color: red;
-}
-
-.menu-item:hover {
-    background-color: #ddd;
 }
 
 main {
     align-items: center;
     float: left;
     width: 90%;
-    padding: 70px;
+    padding: 40px;
 }
 
 .group {
@@ -65,9 +88,6 @@ main img {
 
 main img:hover {
     transform:scale(1.05);
-}
-main img:nth-child(even) {
-    box-shadow: 0px 0px 10px rgba(255, 192, 203, 1);
 }
 
 aside {
