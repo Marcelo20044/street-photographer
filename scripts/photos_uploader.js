@@ -1,6 +1,6 @@
 const preloader = document.getElementById('preloader');
 const photoContainer = document.getElementById('photo-container');
-const maxPhotos = 32;
+const maxPhotos = 28;
 
 function fetchPhotos() {
     const randomAlbumId = Math.random() > 0.5 ? 1 : 2;

@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Визитка Фотографа</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <link rel="stylesheet" href="../styles/outlines.css">
     <script src="../scripts/main.js" defer></script>
     <script src="../scripts/photos_uploader.js" defer></script>
+    <script src="../scripts/auth.js" defer></script>
 </head>
 <body>
 
 <header class="header">
     <h1>@my_profile</h1>
     <nav class="navigation">
-        <ul>
+        <ul class="navigation-menu">
             <li><a class="menu-item main-menu-item" href="index.html">Главная</a></li>
             <li><a class="menu-item" href="contacts.html">Контакты</a></li>
             <li><a class="menu-item" href="trainings.html">Тренинги</a></li>
+            <li class="auth-buttons" id="auth-buttons">
+            </li>
         </ul>
     </nav>
     <nav class="sections-nav">
@@ -100,6 +107,7 @@
         <div id="preloader" class="preloader">Загрузка...</div>
         <div id="photo-container" class="photo-container"></div>
     </section>
+
 
     <footer>
 <!--        <p>Успех = Сила<sup>усилий</sup> + Решимость<sub>ежедневная</sub> +-->
