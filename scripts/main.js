@@ -25,9 +25,8 @@ function updateNavActive() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    setTimeout(() => {
-        loadTime()
-    })
     updateNavActive()
 });
+
+window.addEventListener('load', loadTime);
 
