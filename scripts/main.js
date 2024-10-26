@@ -24,9 +24,8 @@ function updateNavActive() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
     updateNavActive()
+    loadTime()
 });
-
-window.addEventListener('load', loadTime);
 
