@@ -16,7 +16,9 @@ function fetchPhotos() {
             return response.json();
         })
         .then(data => {
-            photoContainer.innerHTML = '';
+            while (photoContainer.firstChild) {
+                photoContainer.removeChild(photoContainer.firstChild);
+            }
 
             let addedPhotos = 0;
 
@@ -26,10 +28,16 @@ function fetchPhotos() {
                 const photoItem = document.createElement('div');
                 photoItem.classList.add('photo-item');
 
-                photoItem.innerHTML = `
-                            <img src="${photo.url}" alt="${photo.title}">
-                            <p class="photo_title">${photo.title}</p>
-                        `;
+                const imgElement = document.createElement('img');
+                imgElement.src = photo.url;
+                imgElement.alt = photo.title;
+
+                const titleElement = document.createElement('p');
+                titleElement.classList.add('photo_title');
+                titleElement.textContent = photo.title;
+
+                photoItem.appendChild(imgElement);
+                photoItem.appendChild(titleElement);
 
                 photoContainer.appendChild(photoItem);
                 addedPhotos++;
@@ -38,14 +46,25 @@ function fetchPhotos() {
             preloader.style.display = 'none';
 
             if (addedPhotos === 0) {
-                photoContainer.innerHTML = '<p>Нет доступных фотографий для отображения</p>';
+                const noPhotosMessage = document.createElement('p');
+                noPhotosMessage.textContent = 'Нет доступных фотографий для отображения';
+                photoContainer.appendChild(noPhotosMessage);
             }
 
             photoContainer.hidden = false;
         })
         .catch(error => {
             preloader.style.display = 'none';
-            photoContainer.innerHTML = '<p>Что-то пошло не так, попробуйте позже</p>';
+
+            // Очищаем контейнер
+            while (photoContainer.firstChild) {
+                photoContainer.removeChild(photoContainer.firstChild);
+            }
+
+            const errorMessage = document.createElement('p');
+            errorMessage.textContent = 'Что-то пошло не так, попробуйте позже';
+            photoContainer.appendChild(errorMessage);
+
             console.error('Ошибка при загрузке фотографий:', error);
         });
 }
